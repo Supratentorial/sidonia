@@ -1,6 +1,8 @@
+@import './styles/_variables.scss';
+@import './styles/_colors.scss';
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
 
 body {
-  background-color: lightgrey;
-  padding-top: 60px;
+  background-color: $md-blue-grey-100;
+  padding-top: 70px;
 }
