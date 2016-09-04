@@ -21,9 +21,10 @@ const states = ['Alabama', 'Alaska', 'American Samoa', 'Arizona', 'Arkansas', 'C
 })
 export class PatientSearchTypeaheadComponent {
 
-  selectedPatient: any = '';
+  selectedPatient: any;
+  searching: boolean;
 
-  constructor(private patientService : PatientService) {
+  constructor(private patientService: PatientService) {
 
   }
 
@@ -31,6 +32,11 @@ export class PatientSearchTypeaheadComponent {
     text$
       .debounceTime(200)
       .distinctUntilChanged()
-      .map(term => term.length < 2 ? []
-        : states.filter(v => new RegExp(term, 'gi').test(v)).splice(0, 10));
+      .do(term => {
+        this.searching = term.length > 0;
+      })
+      .switchMap(term => term === '' ? Observable.of([]) : this.patientService.searchPatients(term))
+      .do(() => {
+        this.searching = false;
+      })
 }
