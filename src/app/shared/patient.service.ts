@@ -17,13 +17,15 @@ export class PatientService {
     params.set('name', searchTerm);
     params.set('_count', '10');
     params.set('_pretty', 'true');
-    console.log(params.toString());
     return this.http.get(this.patientsUrl, {search: params}).map(this.extractData).catch(this.handleError);
   }
 
   extractData(res: Response) {
     let body = res.json();
-    return body.data || {};
+    if(body.total == 0){
+      return [];
+    }
+    return body.entry || {};
   }
 
   handleError(error: any) {
