@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 
 @Component({
   selector: 'patient-detail-shell',
-  template: require('./patient-detail-shell.component.ts.html')
+  template: require('./patient-detail-shell.component.html')
 })
 
 export class PatientDetailShellComponent{

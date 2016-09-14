@@ -6,9 +6,11 @@ import {RouterModule} from '@angular/router';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
-    declarations: [PatientSearchTypeaheadComponent],
-    imports: [CommonModule, FormsModule, NgbModule, RouterModule],
-    exports: [PatientSearchTypeaheadComponent]
+  declarations: [PatientSearchTypeaheadComponent],
+  imports: [CommonModule, FormsModule, NgbModule, RouterModule],
+  exports: [PatientSearchTypeaheadComponent],
+  providers: []
 })
 
-export class SharedModule {}
+export class SharedModule {
+}

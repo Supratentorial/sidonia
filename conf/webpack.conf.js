@@ -17,6 +17,10 @@ module.exports = {
 
     loaders: [
       {
+        test: /\.(eot|woff|woff2|svg|ttf|png)([\?]?.*)$/,
+        loader: "file-loader"
+      },
+      {
         test: /.json$/,
         loaders: [
           'json'

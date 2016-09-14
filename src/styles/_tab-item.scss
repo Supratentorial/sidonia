@@ -1,0 +1,7 @@
+@import "_colors.scss";
+
+.tab-item {
+  background-color: $white;
+  margin: -10px 5px 5px; //Deal with nav bar bottom margin
+  padding: 5px 10px;
+}

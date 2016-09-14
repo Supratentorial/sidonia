@@ -4,6 +4,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/distinctUntilChanged';
 import {PatientService} from './patient.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'patient-search-typeahead',
@@ -15,12 +16,13 @@ export class PatientSearchTypeaheadComponent {
   selectedPatient: any;
   searching: boolean;
 
-  constructor(private patientService: PatientService) {
+  constructor(private patientService: PatientService, private router: Router) {
 
   }
 
   onSelect = (selectedPatient) => {
-    console.log(selectedPatient);
+    this.router.navigate(['/patients', selectedPatient.resource.id]);
+    this.selectedPatient = null;
   };
 
   search = (text$: Observable<string>) =>
