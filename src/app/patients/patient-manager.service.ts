@@ -14,7 +14,6 @@ export class PatientManagerService{
   }
 
   addPatientToOpenList(patient:Patient){
-    if(!this.isPatientOpen(patient.id))
     this.openPatients.push(patient);
     this.openPatientsEvent.next(this.openPatients);
   }

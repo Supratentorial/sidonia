@@ -1,8 +1,7 @@
-<div class="row flex-items-xs-left">
-  <div class="tab-item col-xs-2" *ngFor="let patient of openPatients" [routerLink]="['/patients', patient.id]">
+<span class="tab-item" *ngFor="let patient of openPatients" [routerLink]="['/patients', patient.id]">
     <span>{{patient?.name[0]?.given}}</span>
-    <button class="close" type="button" aria-label="Close">
+    <button class="close" type="button" aria-label="Close" (click)="closePatient()">
       <span aria-hidden="true">&times;</span>
     </button>
-  </div>
-</div>
+</span>
+

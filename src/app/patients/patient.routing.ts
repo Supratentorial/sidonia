@@ -5,14 +5,14 @@ import {ModuleWithProviders} from "@angular/core";
 import {PatientDetailShellComponent} from "./patient-detail-shell.component";
 
 const patientRoutes: Routes = [
-    {
-      path: 'patients',
-      component: PatientHomeComponent,
-      children: [
-        {path: ':id', component: PatientShellComponent, children: [
-          {path: '', component: PatientDetailShellComponent }
-        ]}]
-    }
-  ];
+  {
+    path: 'patients',
+    component: PatientShellComponent
+  },
+  {
+    path: 'patients/:id',
+    component: PatientShellComponent
+  }
+];
 
-export const patientRouting : ModuleWithProviders = RouterModule.forChild(patientRoutes);
+export const patientRouting: ModuleWithProviders = RouterModule.forChild(patientRoutes);

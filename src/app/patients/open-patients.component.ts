@@ -22,6 +22,10 @@ export class OpenPatientsComponent implements OnInit, OnDestroy {
     });
   }
 
+  closePatient(): void{
+    console.log('Close button has been clicked');
+  }
+
   ngOnDestroy(): void {
   }
 }

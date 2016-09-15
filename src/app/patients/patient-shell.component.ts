@@ -19,14 +19,19 @@ export class PatientShellComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.navSubscription = this.route.params.subscribe(params => {
-      if (params['id']) {
-        this.patientService.getPatientById(params['id']).subscribe(
-          patient => {
-            this.patientManagerService.addPatientToOpenList(patient);
-            this.patientManagerService.setCurrentPatient(patient.id);
-          },
-          error => console.log(error)
-        )
+      let patientId: string = params['id'];
+      if (patientId) {
+        if (this.patientManagerService.isPatientOpen(patientId)) {
+          this.patientManagerService.setCurrentPatient(patientId);
+        } else {
+          this.patientService.getPatientById(params['id']).subscribe(
+            patient => {
+              this.patientManagerService.addPatientToOpenList(patient);
+              this.patientManagerService.setCurrentPatient(patient.id);
+            },
+            error => console.log(error)
+          )
+        }
       }
     })
   }
