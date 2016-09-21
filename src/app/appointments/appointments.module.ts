@@ -7,6 +7,5 @@ import {AppointmentsShellComponent} from './appointments-shell.component';
     declarations: [AppointmentsShellComponent],
     imports: [CommonModule],
     exports: [AppointmentsShellComponent]
-
 })
-export class AppoinmentsModule {}
+export class AppointmentsModule {}

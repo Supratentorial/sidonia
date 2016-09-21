@@ -1,0 +1,16 @@
+@import "colors";
+
+.appointment-item {
+  img {
+    height: 25px;
+    width: 25px;
+  }
+
+  .primary-detail{
+    font-size: 18px;
+  }
+
+  .secondary-detail{
+    color: $md-blue-grey-300;
+  }
+}

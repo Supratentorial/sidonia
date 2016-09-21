@@ -1,5 +1,17 @@
-<ul>
-    <li *ngFor='let item of scheduleList'>
-        <strong>{{item.familyName}}, {{item.givenName}} {{item.middleName}}</strong>
-    </li>
-</ul>
+<div *ngFor='let appointment of scheduleList' class="appointment-item card">
+  <div class="card-block">
+    <div>
+      <strong style="font-size: 18px">Blake Mumford</strong>
+      <span class="secondary-detail">15/06/1990</span>
+      <span class="secondary-detail">(26 years)</span>
+      <img src="../../images/male-icon.svg"/>
+      <img src="../../images/female-icon.svg"/>
+    </div>
+    {{appointment.resource.start | date: 'h:mm'}} - {{appointment.resource.end | date: 'shortTime'}}
+    <span>&bull;</span>
+    {{appointment.resource.description}}
+    <div class="tag tag-default">
+      Scheduled
+    </div>
+  </div>
+</div>
