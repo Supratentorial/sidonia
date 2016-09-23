@@ -15,10 +15,7 @@ export class ScheduleListComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.appointmentService.getAppointmentsByDate('2016-09-15').subscribe(
-      appointments => {
-        this.scheduleList = appointments;
-    });
+
   }
 
   ngOnDestroy(): void {
