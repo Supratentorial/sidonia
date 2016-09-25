@@ -9,7 +9,7 @@ import Practitioner = fhir.Practitioner;
 @Injectable()
 export class ScheduleListService {
 
-  private constructor(private appointmentService: AppointmentsService, private patientService: PatientService) {
+  constructor(private appointmentService: AppointmentsService, private patientService: PatientService) {
 
   }
 
@@ -25,7 +25,7 @@ export class ScheduleListService {
           let participants = appointments[i].participant;
           for(let i = 0; i< participants.length; i++){
             if (participants[i].actor.reference){
-              this.
+
             }
           }
         }
