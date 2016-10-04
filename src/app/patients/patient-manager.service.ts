@@ -9,6 +9,7 @@ export class PatientManagerService{
   currentPatient : Patient;
   currentPatientEvent : Subject<Patient> = new Subject<Patient>();
 
+
   constructor(){
 
   }
@@ -25,6 +26,15 @@ export class PatientManagerService{
       }
     }
     return false;
+  }
+
+  removePatientFromOpenList(patientId: string): void {
+    for (var i; i < this.openPatients; i++) {
+      if (patientId === this.openPatients[i].id) {
+        var index = this.openPatients.indexOf(this.openPatients[i]);
+        this.openPatients.splice(index, 1);
+      }
+    }
   }
 
   setCurrentPatient(patientId: id): void {

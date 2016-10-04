@@ -13,16 +13,16 @@ import {Router} from '@angular/router';
 })
 export class PatientSearchTypeaheadComponent {
 
-  selectedPatient: any;
   searching: boolean;
+  selectedPatient: any;
 
   constructor(private patientService: PatientService, private router: Router) {
 
   }
 
-  onSelect = (selectedPatient) => {
-    this.router.navigate(['/patients', selectedPatient.resource.id]);
-    this.selectedPatient = null;
+  onSelect($event, input) {
+    $event.preventDefault();
+    this.router.navigate(['/patients', $event.item.resource.id]);
   };
 
   search = (text$: Observable<string>) =>

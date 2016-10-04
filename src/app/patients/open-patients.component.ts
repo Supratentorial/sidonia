@@ -22,8 +22,12 @@ export class OpenPatientsComponent implements OnInit, OnDestroy {
     });
   }
 
-  closePatient(): void{
-    console.log('Close button has been clicked');
+  closePatient($event, patientId : string): void{
+    $event.stopPropagation();
+    console.log(patientId);
+    if(patientId) {
+      this.patientManagerService.removePatientFromOpenList(patientId);
+    }
   }
 
   ngOnDestroy(): void {

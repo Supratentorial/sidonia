@@ -9,5 +9,5 @@
   </div>
 </template>
 
-<input type="text" class="form-control" [resultTemplate]="resultTemplate" (selectItem)="onSelect(selectedPatient)" [(ngModel)]="selectedPatient"
-       placeholder="Start typing a patient name..." [ngbTypeahead]="search"/>
+<input type="text" class="form-control" [resultTemplate]="resultTemplate" (selectItem)="onSelect($event); input.value='' "
+      [ngModel]="selectedPatient" #input placeholder="Start typing a patient name..." [ngbTypeahead]="search"/>
