@@ -1,0 +1,54 @@
+<div class="row">
+  <div class="col-lg-5 col-md-9 col-sm-9">
+    <button class="btn btn-secondary">Edit</button>
+    <div class="card">
+      <div class="card-block">
+        <h4>{{currentPatient?.name[0].given}} {{currentPatient?.name[0].family}}</h4>
+        <div>
+          <img class="icon-sm" src="../../images/birthday-icon.svg"/>
+          <span class="summary-text">{{currentPatient?.birthDate | date: 'dd MMMM yyyy'}}</span>
+          <img *ngIf="currentPatient?.gender === 'male'" class="icon-sm" src="../../images/male-icon.svg"/>
+          <img *ngIf="currentPatient?.gender === 'female'" class="icon-sm" src="../../images/female-icon.svg"/>
+          <span>{{currentPatient?.gender}}</span>
+          <span class="summary-text"></span>
+        </div>
+        <div>
+          <img class="icon-sm" src="../../images/mobile-phone-icon.svg"/>
+          <span class="summary-text"></span>
+          <img class="icon-sm" src="../../images/home-phone-icon.svg"/>
+          <span class="summary-text"></span>
+          <img class="icon-sm" src="../../images/work-phone-icon.svg"/>
+          <span class="summary-text"></span>
+        </div>
+        <div>
+          <img class="icon-sm" src="../../images/home-icon.svg"/>
+          <span class="summary-text"></span>
+        </div>
+        <div>
+          <img class="icon-sm" src="../../images/email-icon.svg"/>
+          <span class="summary-text"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-5">
+    <div class="card">
+      <div class="card-block">
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-5">
+    <div class="card">
+      <div class="card-block">
+        <div>
+          <span>Aspirin</span><span style="color:lightgray">100mg daily orally</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

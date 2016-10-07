@@ -1,37 +1,44 @@
 <div>
   <div class="row">
-    <div class="col-lg-2">
-      <h4>{{currentPatient?.name[0]?.family}}, {{currentPatient?.name[0]?.given}}</h4>
-      <div>
-        <img src="../../images/birthday-icon.svg"/>
-        <a>{{currentPatient?.birthDate | date: 'd MMMM yyyy'}}</a>
-        <img *ngIf="currentPatient?.gender === 'male'" src="../../images/male-icon.svg"/>
-        <img *ngIf="currentPatient?.gender ==='female'" src="../../images/female-icon.svg"/>
-        <a>{{currentPatient?.gender}}</a>
+    <div class="col-lg-1">
+      <img class="patient-profile-picture" src="../../images/user-icon.svg"/>
+    </div>
+    <div class="col-lg-3">
+      <div class="row">
+        <h4 class="col-lg-12">{{currentPatient?.name[0].prefix}} {{currentPatient?.name[0].given}} {{currentPatient?.name[0].family}}</h4>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <img class="icon-sm" src="../../images/birthday-icon.svg"/>
+          <a>{{currentPatient?.birthDate | date: 'dd MMMM yyyy'}}</a>
+          <img class="icon-sm" *ngIf="currentPatient?.gender === 'male'" src="../../images/male-icon.svg"/>
+          <img class="icon-sm" *ngIf="currentPatient?.gender ==='female'" src="../../images/female-icon.svg"/>
+          <a>{{currentPatient?.gender}}</a>
+        </div>
       </div>
     </div>
     <div class="vertical-divider"></div>
     <div class="col-lg-2">
       <div>
-        <img src="../../images/mobile-phone-icon.svg"/>
+        <img class="icon-sm" src="../../images/mobile-phone-icon.svg"/>
         <a></a>
       </div>
       <div>
-        <img src="../../images/home-icon.svg"/>
+        <img class="icon-sm" src="../../images/home-icon.svg"/>
         <a></a>
       </div>
     </div>
     <div class="vertical-divider"></div>
     <div class="col-lg-2">
       <div>
-        <img class="banner-icon" src="../../images/current-smoker-icon.svg"/>
-        <img class="banner-icon" src="../../images/ex-smoker-icon.svg"/>
-        <img class="banner-icon" src="../../images/never-smoked-icon.svg"/>
+        <img class="icon-sm" src="../../images/current-smoker-icon.svg"/>
+        <img class="icon-sm" src="../../images/ex-smoker-icon.svg"/>
+        <img class="icon-sm" src="../../images/never-smoked-icon.svg"/>
         <a></a>
       </div>
       <div>
-        <img class="banner-icon" src="../../images/no-alcohol-icon.svg"/>
-        <img class="banner-icon" src="../../images/heavy-alcohol-icon.svg"/>
+        <img class="icon-sm" src="../../images/no-alcohol-icon.svg"/>
+        <img class="icon-sm" src="../../images/heavy-alcohol-icon.svg"/>
         <a class="content"></a>
       </div>
     </div>

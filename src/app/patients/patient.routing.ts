@@ -2,7 +2,7 @@ import {Routes, RouterModule} from "@angular/router";
 import {PatientShellComponent} from "./patient-shell.component";
 import {PatientHomeComponent} from "./patient-home.component";
 import {ModuleWithProviders} from "@angular/core";
-import {PatientDetailShellComponent} from "./patient-detail-shell.component";
+import {PatientSummaryComponent} from "./patient-summary.component";
 
 const patientRoutes: Routes = [
   {
@@ -11,7 +11,10 @@ const patientRoutes: Routes = [
   },
   {
     path: 'patients/:id',
-    component: PatientShellComponent
+    component: PatientShellComponent,
+    children: [
+      {path: '', component: PatientSummaryComponent}
+    ]
   }
 ];
 

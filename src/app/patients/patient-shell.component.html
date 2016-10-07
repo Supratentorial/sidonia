@@ -5,5 +5,21 @@
   <patient-banner class="col-lg-12 flex-items-lg-left banner"></patient-banner>
 </div>
 <div class="row">
-  <patient-detail-shell></patient-detail-shell>
+  <div class="col-lg-2">
+    <div class="list-group">
+      <a class="list-group-item">Summary</a>
+      <a class="list-group-item">Encounters</a>
+      <a class="list-group-item">Investigations</a>
+      <a class="list-group-item">Scripts</a>
+      <a class="list-group-item">Vitals</a>
+      <a class="list-group-item">Documents</a>
+      <a class="list-group-item">Medical History</a>
+      <a class="list-group-item">Social & Family History</a>
+      <a class="list-group-item">Allergies & Intolerances</a>
+      <a class="list-group-item"><i></i>Immunisations</a>
+    </div>
+  </div>
+  <div class="col-lg-10">
+    <router-outlet></router-outlet>
+  </div>
 </div>
