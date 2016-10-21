@@ -3,6 +3,7 @@ import {PatientShellComponent} from "./patient-shell.component";
 import {PatientHomeComponent} from "./patient-home.component";
 import {ModuleWithProviders} from "@angular/core";
 import {PatientSummaryComponent} from "./patient-summary.component";
+import {PatientDemographicsComponent} from "./patient-demographics.component";
 
 const patientRoutes: Routes = [
   {
@@ -13,7 +14,8 @@ const patientRoutes: Routes = [
     path: 'patients/:id',
     component: PatientShellComponent,
     children: [
-      {path: '', component: PatientSummaryComponent}
+      {path: '', component: PatientSummaryComponent},
+      {path: 'edit-basic', component: PatientDemographicsComponent}
     ]
   }
 ];

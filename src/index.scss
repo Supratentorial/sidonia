@@ -10,3 +10,15 @@ body {
   background-color: $md-blue-grey-100;
   padding-top: 70px;
 }
+
+.footer {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  bottom: 0;
+  height: 40px;
+  width: 100%;
+  background: $md-blue-grey-400;
+}
