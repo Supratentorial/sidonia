@@ -1,15 +1,16 @@
 <div class="banner">
 
   <img class="patient-profile-picture" src="../../images/user-icon.svg"/>
-
-  <h4>{{currentPatient?.name[0].prefix}} {{currentPatient?.name[0].given}} {{currentPatient?.name[0].family}}</h4>
-
   <div>
-    <img class="icon-sm" src="../../images/birthday-icon.svg"/>
-    <a>{{currentPatient?.birthDate | date: 'dd MMMM yyyy'}}</a>
-    <img class="icon-sm" *ngIf="currentPatient?.gender === 'male'" src="../../images/male-icon.svg"/>
-    <img class="icon-sm" *ngIf="currentPatient?.gender ==='female'" src="../../images/female-icon.svg"/>
-    <a>{{currentPatient?.gender}}</a>
+    <h4>{{currentPatient?.name[0].prefix}} {{currentPatient?.name[0].given}} {{currentPatient?.name[0].family}}</h4>
+
+    <div>
+      <img class="icon-sm" src="../../images/birthday-icon.svg"/>
+      <a>{{currentPatient?.birthDate | date: 'dd MMMM yyyy'}}</a>
+      <img class="icon-sm" *ngIf="currentPatient?.gender === 'male'" src="../../images/male-icon.svg"/>
+      <img class="icon-sm" *ngIf="currentPatient?.gender ==='female'" src="../../images/female-icon.svg"/>
+      <a>{{currentPatient?.gender}}</a>
+    </div>
   </div>
 
 
