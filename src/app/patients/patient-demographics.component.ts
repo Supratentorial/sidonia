@@ -7,6 +7,7 @@ import {PatientManagerService} from "./patient-manager.service";
 
 export class PatientDemographicsComponent implements OnInit {
   givenName: string;
+  familyName: string;
 
   constructor(private patientManagerService: PatientManagerService) {
   }
@@ -14,5 +15,6 @@ export class PatientDemographicsComponent implements OnInit {
 
   ngOnInit(): void {
     this.givenName = this.patientManagerService.currentPatient.name[0].given[0];
+    this.familyName = this.patientManagerService.currentPatient.name[0].family[0];
   }
 }
