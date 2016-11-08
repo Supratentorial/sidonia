@@ -5,12 +5,12 @@
 @import './styles/_icons.scss';
 @import './styles/_fonts.scss';
 @import './styles/_cards.scss';
-@import 'styles/_list-items.scss';
+@import 'styles/_list-groups';
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
 
 body {
   background-color: $md-blue-grey-50;
-  padding-top: 70px;
+  padding-top: 60px;
 }
 
 .footer {

@@ -7,27 +7,27 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   height="50"
-   width="50"
-   viewBox="0 0 50 50"
+   height="40"
+   width="40"
+   viewBox="0 0 40 40"
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="home-icon.svg">
+   sodipodi:docname="medications-icon.svg">
   <metadata
-     id="metadata13">
+     id="metadata11">
     <rdf:RDF>
       <cc:Work
          rdf:about="">
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <defs
-     id="defs11" />
+     id="defs9" />
   <sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -39,33 +39,26 @@
      inkscape:pageshadow="2"
      inkscape:window-width="1920"
      inkscape:window-height="1137"
-     id="namedview9"
+     id="namedview7"
      showgrid="false"
-     inkscape:zoom="4.9166667"
-     inkscape:cx="-9.6779659"
-     inkscape:cy="25"
+     inkscape:zoom="9.8333333"
+     inkscape:cx="33.438847"
+     inkscape:cy="43.813971"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:current-layer="g4"
-     fit-margin-top="1"
-     fit-margin-left="1"
-     fit-margin-right="1"
-     fit-margin-bottom="1" />
+     fit-margin-top="5"
+     fit-margin-left="5"
+     fit-margin-right="5"
+     fit-margin-bottom="5" />
   <g
      id="g4"
-     transform="translate(1,1)">
-    <circle
-       cy="24"
-       cx="24"
-       id="ellipse6"
-       style="fill:#eceff1;fill-opacity:1"
-       r="24" />
+     transform="translate(4.5000001,-12.5)">
     <path
        id="path1"
-       transform="matrix(0.8125,0,0,0.8125,11,13.255084)"
-       d="M 16.243999,6.8650064 27.917,14.707014 l 0,11.742011 -23.8280003,0 0,-11.742011 z M 16.212999,0 32,10.84001 32,14.416014 16.235,3.5680037 0,14.732014 0,11.150011 Z"
-       inkscape:connector-curvature="0"
-       style="fill:#263238;fill-opacity:1" />
+       d="m 20.510151,29.084394 8.293531,8.297517 c 2.298192,2.241555 2.237204,5.96905 -0.03723,8.328272 -2.273976,2.357611 -5.975231,2.371224 -8.274009,0.128729 L 12.198896,37.541364 Z M 3.6316904,18.193874 c 2.2691725,-1.169284 4.95468,-0.862921 6.8756376,0.935554 l 8.292569,8.298111 -8.310706,8.457967 -8.292561,-8.298112 c -2.29873841,-2.242529 -2.2371721,-5.969068 0.03626,-8.327678 0.447826,-0.388669 0.8956482,-0.777344 1.3987987,-1.065857 z"
+       style="fill:none;fill-opacity:1;stroke:#263238;stroke-opacity:1;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none"
+       inkscape:connector-curvature="0" />
   </g>
 </svg>
