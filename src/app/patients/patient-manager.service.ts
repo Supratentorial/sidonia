@@ -1,6 +1,7 @@
-import Patient = fhir.Patient;
-import id = fhir.id;
+
+
 import {Subject} from "rxjs";
+import {Patient} from "./patient";
 
 export class PatientManagerService{
 
@@ -19,7 +20,7 @@ export class PatientManagerService{
     this.openPatientsEvent.next(this.openPatients);
   }
 
-  isPatientOpen(patientId: id): boolean {
+  isPatientOpen(patientId: string): boolean {
     for (var i = 0; i < this.openPatients.length; i++) {
       if (patientId === this.openPatients[i].id) {
         return true;
@@ -37,7 +38,7 @@ export class PatientManagerService{
     }
   }
 
-  setCurrentPatient(patientId: id): void {
+  setCurrentPatient(patientId: string): void {
     if (patientId) {
       for (var i = 0; i < this.openPatients.length; i++) {
         if (patientId === this.openPatients[i].id) {

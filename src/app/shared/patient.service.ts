@@ -1,8 +1,9 @@
 import {Injectable} from '@angular/core';
 import {Http, Response, URLSearchParams} from '@angular/http';
 import {Observable} from 'rxjs/observable';
-import Patient = fhir.Patient;
+
 import Bundle = fhir.Bundle;
+import {Patient} from "../patients/patient";
 
 @Injectable()
 export class PatientService {
