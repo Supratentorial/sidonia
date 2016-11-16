@@ -1,21 +1,22 @@
 
 
 import {Subject} from "rxjs";
-import {Patient} from "./patient";
+import {PatientDTO} from "./patientDTO";
 
 export class PatientManagerService{
 
-  openPatients: Patient[] = [];
-  openPatientsEvent : Subject<Patient[]> = new Subject<Patient[]>();
-  currentPatient : Patient;
-  currentPatientEvent : Subject<Patient> = new Subject<Patient>();
+  openPatients: PatientDTO[] = [];
+  openPatientsEvent : Subject<PatientDTO[]> = new Subject<PatientDTO[]>();
+  currentPatient : PatientDTO;
+  currentPatientEvent : Subject<PatientDTO> = new Subject<PatientDTO>();
 
 
   constructor(){
 
   }
 
-  addPatientToOpenList(patient:Patient){
+  addPatientToOpenList(patient:PatientDTO){
+    console.log(patient);
     this.openPatients.push(patient);
     this.openPatientsEvent.next(this.openPatients);
   }

@@ -22,7 +22,7 @@ export class PatientSearchTypeaheadComponent {
 
   onSelect($event, input) {
     $event.preventDefault();
-    this.router.navigate(['/patients', $event.item.resource.id]);
+    this.router.navigate(['/patients', $event.item.id]);
   };
 
   search = (text$: Observable<string>) =>

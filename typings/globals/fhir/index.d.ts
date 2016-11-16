@@ -900,7 +900,7 @@ declare namespace fhir {
         communication?: CodeableConcept[];
     }
     /**
-     * A contact party (e.g. guardian, partner, friend) for the patient
+     * A contact party (e.g. guardian, partner, friend) for the patientDTO
      */
     interface PatientContact extends Element {
         /**
@@ -937,7 +937,7 @@ declare namespace fhir {
         period?: Period;
     }
     /**
-     * This patient is known to be an animal (non-human)
+     * This patientDTO is known to be an animal (non-human)
      */
     interface PatientAnimal extends Element {
         /**
@@ -954,7 +954,7 @@ declare namespace fhir {
         genderStatus?: CodeableConcept;
     }
     /**
-     * A list of Languages which may be used to communicate with the patient about his or her health
+     * A list of Languages which may be used to communicate with the patientDTO about his or her health
      */
     interface PatientCommunication extends Element {
         /**
@@ -971,7 +971,7 @@ declare namespace fhir {
         _preferred?: Element;
     }
     /**
-     * Link to another patient resource that concerns the same actual person
+     * Link to another patientDTO resource that concerns the same actual person
      */
     interface PatientLink extends Element {
         /**
@@ -1097,7 +1097,7 @@ declare namespace fhir {
         link?: PatientLink[];
     }
     /**
-     * An person that is related to a patient, but who is not a direct target of care
+     * An person that is related to a patientDTO, but who is not a direct target of care
      */
     interface RelatedPerson extends DomainResource {
         /**
@@ -2260,7 +2260,7 @@ declare namespace fhir {
         _status?: Element;
     }
     /**
-     * A booking of a healthcare event among patient(s), practitioner(s), related person(s) and/or device(s) for a specific date/time. This may result in one or more Encounter(s)
+     * A booking of a healthcare event among patientDTO(s), practitioner(s), related person(s) and/or device(s) for a specific date/time. This may result in one or more Encounter(s)
      */
     interface Appointment extends DomainResource {
         /**
@@ -2341,7 +2341,7 @@ declare namespace fhir {
         participant: AppointmentParticipant[];
     }
     /**
-     * A reply to an appointment request for a patient and/or practitioner(s), such as a confirmation or rejection
+     * A reply to an appointment request for a patientDTO and/or practitioner(s), such as a confirmation or rejection
      */
     interface AppointmentResponse extends DomainResource {
         /**
@@ -4787,7 +4787,7 @@ declare namespace fhir {
         note?: Annotation;
     }
     /**
-     * Information about patient's relatives, relevant for patient
+     * Information about patientDTO's relatives, relevant for patientDTO
      */
     interface FamilyMemberHistory extends DomainResource {
         /**
@@ -5404,7 +5404,7 @@ declare namespace fhir {
         manipulated: Reference;
     }
     /**
-     * An action that was or is currently being performed on a patient
+     * An action that was or is currently being performed on a patientDTO
      */
     interface Procedure extends DomainResource {
         /**
@@ -6208,7 +6208,7 @@ declare namespace fhir {
         priority?: CodeableConcept;
     }
     /**
-     * A request for a patient to use or be given a medical device
+     * A request for a patientDTO to use or be given a medical device
      */
     interface DeviceUseRequest extends DomainResource {
         /**
@@ -6416,7 +6416,7 @@ declare namespace fhir {
         reason?: CodeableConcept;
     }
     /**
-     * Prescription of medication to for patient
+     * Prescription of medication to for patientDTO
      */
     interface MedicationOrder extends DomainResource {
         /**
@@ -7083,7 +7083,7 @@ declare namespace fhir {
         _notes?: Element;
     }
     /**
-     * Prescription for Vision correction products for a patient
+     * Prescription for Vision correction products for a patientDTO
      */
     interface VisionPrescription extends DomainResource {
         /**
@@ -7124,7 +7124,7 @@ declare namespace fhir {
         dispense?: VisionPrescriptionDispense[];
     }
     /**
-     * A clinical assessment performed when planning treatments and management strategies for a patient
+     * A clinical assessment performed when planning treatments and management strategies for a patientDTO
      */
     interface ClinicalImpression extends DomainResource {
         /**
@@ -7396,7 +7396,7 @@ declare namespace fhir {
         member?: Reference;
     }
     /**
-     * An association of a Patient with an Organization and  Healthcare Provider(s) for a period of time that the Organization assumes some level of responsibility
+     * An association of a PatientDTO with an Organization and  Healthcare Provider(s) for a period of time that the Organization assumes some level of responsibility
      */
     interface EpisodeOfCare extends DomainResource {
         /**
@@ -7515,7 +7515,7 @@ declare namespace fhir {
         dischargeDiagnosis?: Reference[];
     }
     /**
-     * List of locations the patient has been at
+     * List of locations the patientDTO has been at
      */
     interface EncounterLocation extends Element {
         /**
@@ -7536,7 +7536,7 @@ declare namespace fhir {
         period?: Period;
     }
     /**
-     * An interaction during which services are provided to the patient
+     * An interaction during which services are provided to the patientDTO
      */
     interface Encounter extends DomainResource {
         /**
@@ -7720,7 +7720,7 @@ declare namespace fhir {
         maxDosePerPeriod?: Ratio;
     }
     /**
-     * Record of medication being taken by a patient
+     * Record of medication being taken by a patientDTO
      */
     interface MedicationStatement extends DomainResource {
         /**
@@ -7915,7 +7915,7 @@ declare namespace fhir {
         resultReference?: Reference;
     }
     /**
-     * Describes the intended objective(s) for a patient, group or organization
+     * Describes the intended objective(s) for a patientDTO, group or organization
      */
     interface Goal extends DomainResource {
         /**
@@ -8118,7 +8118,7 @@ declare namespace fhir {
         _description?: Element;
     }
     /**
-     * Healthcare plan for patient or group
+     * Healthcare plan for patientDTO or group
      */
     interface CarePlan extends DomainResource {
         /**
@@ -14188,7 +14188,7 @@ declare namespace fhir {
         rateRange?: Range;
     }
     /**
-     * Administration of medication to a patient
+     * Administration of medication to a patientDTO
      */
     interface MedicationAdministration extends DomainResource {
         /**
@@ -14273,7 +14273,7 @@ declare namespace fhir {
         dosage?: MedicationAdministrationDosage;
     }
     /**
-     * Medicine administration instructions to the patient/carer
+     * Medicine administration instructions to the patientDTO/carer
      */
     interface MedicationDispenseDosageInstruction extends Element {
         /**
@@ -14359,7 +14359,7 @@ declare namespace fhir {
         responsibleParty?: Reference[];
     }
     /**
-     * Dispensing a medication to a named patient
+     * Dispensing a medication to a named patientDTO
      */
     interface MedicationDispense extends DomainResource {
         /**

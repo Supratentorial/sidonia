@@ -1,6 +1,7 @@
 import {Component, OnInit} from "@angular/core";
 import {PatientManagerService} from "./patient-manager.service";
 import Patient = fhir.Patient;
+import {PatientDTO} from "./patientDTO";
 @Component({
   selector: 'patient-demographics',
   template: require('./patient-demographics.component.html')
@@ -8,7 +9,7 @@ import Patient = fhir.Patient;
 
 export class PatientDemographicsComponent implements OnInit {
 
-  patient: Patient;
+  patientDTO : PatientDTO;
 
   constructor(private patientManagerService: PatientManagerService) {
 
@@ -16,6 +17,8 @@ export class PatientDemographicsComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.patient = this.patientManagerService.currentPatient;
+    this.patientDTO = this.patientManagerService.currentPatient;
+    console.log(this.patientDTO.familyName);
+    console.log(this.patientManagerService.currentPatient);
   }
 }

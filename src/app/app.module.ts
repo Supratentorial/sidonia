@@ -13,13 +13,14 @@ import {AppComponent} from './app.component';
 import {PatientService} from './shared/patient.service.ts';
 import {PatientManagerService} from "./patients/patient-manager.service";
 import {AppointmentsService} from "./appointments/appointments.service";
+import {PatientMappingService} from "./shared/patient-mapping.service";
 
 
 @NgModule({
     declarations: [AppComponent],
     imports: [BrowserModule, HttpModule, routing, DashboardModule, SettingsModule, AppointmentsModule, SharedModule, PatientModule],
     bootstrap: [AppComponent],
-    providers: [PatientManagerService, PatientService, AppointmentsService]
+    providers: [PatientManagerService, PatientService, AppointmentsService, PatientMappingService]
 })
 
 export class AppModule { }

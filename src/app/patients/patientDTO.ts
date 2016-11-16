@@ -1,5 +1,6 @@
-export class Patient{
+export class PatientDTO{
   id: string;
   givenName: string;
   familyName: string;
+  birthDate: string;
 }

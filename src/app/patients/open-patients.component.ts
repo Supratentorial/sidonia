@@ -1,14 +1,15 @@
 import {Component, OnInit, OnDestroy} from "@angular/core";
 import {PatientManagerService} from "./patient-manager.service";
-import Patient = fhir.Patient;
+
 import {Subscription} from "rxjs";
+import {PatientDTO} from "./patientDTO";
 @Component({
   selector: 'open-patients',
   template: require('./open-patients.component.html')
 })
 export class OpenPatientsComponent implements OnInit, OnDestroy {
 
-  openPatients: Array<Patient> = [];
+  openPatients: Array<PatientDTO> = [];
   openPatientsSubscription : Subscription;
 
   constructor(private patientManagerService: PatientManagerService) {

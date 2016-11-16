@@ -1,10 +1,10 @@
 <template #resultTemplate let-r="result" let-t="term">
   <div>
     <div>
-      {{r.resource.name[0].given}} {{r.resource.name[0].family}}
+      {{r.givenName}} {{r.familyName}}
     </div>
     <div>
-      {{r.resource.birthDate | date: 'dd/MM/yyyy'}}
+      {{r.birthDate | date: 'dd/MM/yyyy'}}
     </div>
   </div>
 </template>
